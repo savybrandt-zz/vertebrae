@@ -26,12 +26,18 @@ var Comment = Backbone.Model.extend({
   initialize: function(message) {
     /* Set the initial values for `votes` to 0 and `message` to the message.
      * Remember to use setters when working with attributes! */
+<<<<<<< HEAD
      this.set({votes: 0});
      this.set('message',message);
+=======
+     this.set('votes', 0);
+     this.set('message', message);
+>>>>>>> 8deb20105055db68f43b8ce8978c802fb6c894ac
   },
   votes: function() {
     /* Return the votes attribute on this model.
      * Remember to use a getter when working with attributes! */
+<<<<<<< HEAD
      return this.get('votes');
   },
   upvote: function(){
@@ -41,6 +47,17 @@ var Comment = Backbone.Model.extend({
   // Add a downvote function; don't forget the comma above.
   downvote: function(){
     this.set('votes', votes-1);
+=======
+     this.get('votes');
+  },
+  upvote: function(){
+    // Set the `votes` attribute to the current vote count plus one.
+    this.set('votes', this.get('votes')+1);
+  },
+  // Add a downvote function; don't forget the comma above.
+  downvote: function() {
+    this.set('votes', this.get('votes')-1);
+>>>>>>> 8deb20105055db68f43b8ce8978c802fb6c894ac
   }
 });
 
@@ -153,6 +170,10 @@ var commentView = new CommentView({ model: comment });
  * Uncomment the line below and reload the page,
  * and it should say '1' to the left of the comment. */
  comment.upvote();
+<<<<<<< HEAD
+=======
+ comment.downvote();
+>>>>>>> 8deb20105055db68f43b8ce8978c802fb6c894ac
 
 /* play with this in your console as well.
  * You can modify the comment object in the same way we just did:
